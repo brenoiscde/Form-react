@@ -1,0 +1,24 @@
+form{
+    margin-top: 10rem;
+    border: none;
+    border-radius: 30px;
+    padding: 40px 20px;
+    background: #fff;
+    box-shadow: 2px 2px 30px 2px #00000059;
+    padding: 60px 60px;
+}
+input{
+    width: 100%;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.register-button{
+    margin-top: 40px;
+    cursor: pointer;
+    background: #3750EB;
+    font-weight: 600;
+    color: #fff;
+}

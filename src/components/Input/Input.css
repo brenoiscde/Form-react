@@ -1,0 +1,18 @@
+.inputName{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+input{
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(128, 128, 128, 0.13);
+    font-size: 18px;
+    padding: 10px;
+    outline: none;
+    margin-bottom: 10px;
+}
