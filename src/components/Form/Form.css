@@ -6,6 +6,10 @@ form{
     background: #fff;
     box-shadow: 2px 2px 30px 2px #00000059;
     padding: 60px 60px;
+    transition: transform 0.3s ease;
+}
+form:hover{
+    transform: scale(1.02);
 }
 input{
     width: 100%;

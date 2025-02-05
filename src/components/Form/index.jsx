@@ -1,18 +1,20 @@
+import { useState } from "react";
 import Input from "../Input";
 import "./Form.css";
-import { useState } from "react";
 
 function Form(){
 
-    const [email, setEmail] = useState();
-    const [password, setPassword] = useState();
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [displayEmail, setDisplay] = useState("");
+    const [displayPassword, setDisplayPassword] = useState("");
 
-
-    const sendLogin = (event) => {
+    const sendLogin = (event) =>{
         event.preventDefault();
-        console.log('O formulário foi submetido')
-        console.log(`Email:${email}\n Password:${password}`)
+        setDisplay(email)
+        setDisplayPassword(password)
     }
+    
     return(
         <form onSubmit={sendLogin}>
             <h1>Login</h1>
@@ -21,16 +23,16 @@ function Form(){
                 type="email"
                 value = {email}
                 handleValue = {value => setEmail(value)}
-                
             />
             <Input 
                 label="Password" 
                 type="password"
                 value = {password}
                 handleValue = {value => setPassword(value)}
-            
             />
             <input className="register-button" type="submit" value="Registrar"/>
+            {displayEmail &&<p>Login:{displayEmail}</p>}
+            {displayPassword && <p>Senha:{displayPassword}</p>}
         </form>
     )
 }
