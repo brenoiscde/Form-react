@@ -1,11 +1,10 @@
 import './Input.css';
 
 function Input(props){
-    let valor = ""
     const getValue = (event)=>{
-        valor = event.target.value;
-        console.log(valor);
+        props.handleValue(event.target.value);
     }
+   
     return (
         <div className="inputName">
             <label htmlFor="">{props.label}</label>
